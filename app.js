@@ -8,21 +8,27 @@ function printOdds(count) {
         }
     }
 }
+printOdds(15);
+printOdds(23); 
 
 // Exercise 2 Section
-let userName = prompt("Please input your name");
-let age = prompt("Please enter your age"); 
-
-if (age < 16) {
-    console.log(underSixteen); 
-} else {
-    console.log(aboveSixteen); 
-}
 
 function checkAge(userName, age) {
-    let aboveSixteen = 'Congrats ${username}, you are able to drive!';
-    let underSixteen = 'I am sorry, ${username}, you have to wait until you are 16 to be able to legally drive.'
+    let aboveSixteen = `Congrats ${userName}, you are able to drive!`;
+    let underSixteen = `I am sorry, ${userName}, you have to wait until you are 16 to be able to legally drive.`;
+
+    if (age < 16) {
+        console.log(underSixteen); 
+        } else {
+        console.log(aboveSixteen); 
+        }
 }
+
+checkAge("Kim",15); 
+checkAge("Nya",22);
+checkAge("Byran", 16);
+
+
 // Exercise 3 Section 
 
 function quadrantFinder(x,y) {
@@ -47,6 +53,10 @@ function quadrantFinder(x,y) {
     }
 
 }
+
+quadrantFinder(0,7);
+quadrantFinder(-1, 7);
+
 // Exercise 4 Section 
 function typeTriangle(side1, side2, side3) {
     if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
@@ -62,3 +72,6 @@ function typeTriangle(side1, side2, side3) {
         console.log("Scalene triangle"); 
     }
 }
+
+typeTriangle(1,1,2);
+typeTriangle(1,2,2);
